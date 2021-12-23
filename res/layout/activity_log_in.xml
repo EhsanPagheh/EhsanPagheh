@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:id="@+id/log_cl_root"
+  tools:context=".activity.ActivityLogIn">
+
+  <EditText
+    android:id="@+id/edt_userName"
+    android:layout_width="0dp"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/log_in_margin"
+    android:autofillHints="emailAddress|phone|name"
+    android:background="@drawable/back_edit"
+    android:gravity="center_vertical"
+    android:hint="@string/phone_number_email_or_username"
+    android:inputType="textNoSuggestions"
+    android:paddingStart="@dimen/vertical_margin"
+    android:singleLine="true"
+    app:layout_constraintBottom_toTopOf="@id/edt_password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline_top" />
+
+  <EditText
+    android:id="@+id/edt_password"
+    android:layout_width="0dp"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/log_in_margin"
+    android:autofillHints="password"
+    android:background="@drawable/back_edit"
+    android:gravity="center_vertical"
+    android:hint="@string/password"
+    android:inputType="textPassword"
+    android:paddingStart="@dimen/vertical_margin"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/edt_userName" />
+
+  <Spinner
+    android:id="@+id/spinner"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    tools:listitem="@android:layout/simple_expandable_list_item_1" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline_top"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.25" />
+
+  <androidx.constraintlayout.widget.Guideline
+    android:id="@+id/guideline_bottom"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:layout_constraintGuide_percent="0.8" />
+
+  <Button
+    android:id="@+id/btn_logIn"
+    android:layout_width="0dp"
+    android:layout_height="48dp"
+    android:layout_margin="@dimen/log_in_margin"
+    android:text="@string/log_in"
+    android:textStyle="bold"
+    android:textSize="16sp"
+    android:textColor="@color/white"
+    android:textAllCaps="false"
+    android:background="@drawable/back_button"
+    app:layout_constraintBottom_toTopOf="@id/lin_helpLogIn"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edt_password" />
+
+  <LinearLayout
+    android:id="@+id/lin_helpLogIn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/vertical_margin"
+    android:padding="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/btn_logIn">
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:maxLines="1"
+      android:text="@string/forget_your_login_details"
+      android:textColor="#555555"
+      android:textSize="@dimen/normal_text_size"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/get_help_logging_in"
+      android:textColor="@color/purple_700"
+      android:textSize="15sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/textView"
+      app:layout_constraintTop_toBottomOf="@+id/button" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/lin_or"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/log_in_margin"
+    android:layout_marginStart="@dimen/log_in_margin"
+    android:layout_marginTop="@dimen/vertical_margin"
+    android:gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/lin_helpLogIn">
+
+
+    <View
+      android:id="@+id/divider1"
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:layout_marginEnd="@dimen/or_margin"
+      android:layout_weight="1"
+      android:background="?android:attr/listDivider" />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/or_margin"
+      android:text="@string/or"
+      android:textSize="18sp"
+      android:textStyle="bold" />
+
+    <View
+      android:id="@+id/divider2"
+      android:layout_width="wrap_content"
+      android:layout_height="1dp"
+      android:layout_marginStart="@dimen/or_margin"
+      android:layout_weight="1"
+      android:background="?android:attr/listDivider" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/lin_or"
+    app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+    >
+
+
+    <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:rotation="-51"
+      android:rotationX="9"
+      android:rotationY="9"
+      android:src="@drawable/ic_send"
+      android:contentDescription="@string/telegram_icon" />
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txt_logInViaTelegram"
+      android:text="@string/log_in_with_telegram"
+      android:textColor="#1E64A7"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      />
+  </LinearLayout>
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="@dimen/log_in_margin"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent">
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/normal_text_size"
+      android:text="@string/don_t_have_an_account"/>
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/txt_singUp"
+      android:textColor="@color/purple_700"
+      android:text="@string/sign_up"/>
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

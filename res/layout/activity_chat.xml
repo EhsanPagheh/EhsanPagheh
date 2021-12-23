@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".activity.ActivityChat">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rv_chat"
+    android:layout_alignParentTop="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@id/rl_chat"
+    android:layout_marginBottom="0dp"
+    />
+
+  <RelativeLayout
+    android:id="@+id/rl_chat"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentBottom="true"
+    android:padding="8dp"
+    >
+
+    <EditText
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_centerInParent="true"
+      android:padding="8dp"
+      android:background="@drawable/back_edit"
+      android:ems="10"
+      android:id="@+id/edt_sendMessage"
+      android:hint="@string/put_your_message_here"
+      android:imeOptions="actionSend"
+      android:inputType="textShortMessage"
+      android:paddingTop="8dp" />
+
+    <ImageButton
+      android:id="@+id/img_send"
+      android:padding="4dp"
+      android:background="@android:color/transparent"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_centerVertical="true"
+      android:layout_alignParentEnd="true"
+      android:contentDescription="@string/send"
+      android:src="@drawable/ic_send"
+      />
+
+  </RelativeLayout>
+
+</RelativeLayout>

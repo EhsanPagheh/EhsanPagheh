@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:paddingEnd="60dp"
+  android:paddingVertical="10dp"
+  android:paddingStart="15dp"
+  android:clipToPadding="false"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content">
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/txt_name"
+    android:layout_toEndOf="@id/img_profileOther"
+    android:layout_alignTop="@id/img_profileOther"
+    android:paddingBottom="4dp"
+    android:layout_marginStart="15dp"
+    android:text="presindent chenuar"
+    />
+
+  <ImageView
+    android:src="@mipmap/ic_launcher_round"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_alignParentLeft="true"
+    android:contentDescription="profile of user"
+    android:id="@+id/img_profileOther"
+    />
+
+  <TextView
+    android:id="@+id/txt_body"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txt_name"
+    android:layout_toEndOf="@id/img_profileOther"
+    android:elevation="2dp"
+    android:paddingHorizontal="10dp"
+    android:background="@drawable/message_incoming"
+    android:textColor="@color/black"
+    android:paddingVertical="8dp"
+    android:text="someone elses message"
+    android:textSize="14sp" />
+</RelativeLayout>
